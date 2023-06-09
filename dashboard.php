@@ -19,9 +19,9 @@
 <body>
     <?php 
         include 'include/topNav.php';
-        if(!isset($_SESSION['utilisateur'])){
+        if(!isset($_SESSION['utilisateur']) or $_SESSION['utilisateur']['username'] != 'admin'){
                 
-            header('location: connexion.php');
+            header('location: index.php');
         }
    ?>
     <div class="container">
